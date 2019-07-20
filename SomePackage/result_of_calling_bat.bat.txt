@@ -1,0 +1,18 @@
+PS C:\temp\a\SomePackage\src> .\bat.bat                                              
+C:\temp\a\SomePackage\src>julia --startup-file=no --track-allocation=user mwe_include_error.jl
+readdir(fldr) = ["SomePackage"]
+isfile(fi) = true
+ERROR: LoadError: could not open file C:\temp\a\SomePackage\src\src\file.jl
+Stacktrace:
+ [1] include at .\boot.jl:317 [inlined]
+ [2] include_relative(::Module, ::String) at .\loading.jl:1044
+ [3] include(::Module, ::String) at .\sysimg.jl:29
+ [4] include(::String) at .\client.jl:392
+ [5] top-level scope at none:0
+ [6] include at .\boot.jl:317 [inlined]
+ [7] include_relative(::Module, ::String) at .\loading.jl:1044
+ [8] include(::Module, ::String) at .\sysimg.jl:29
+ [9] exec_options(::Base.JLOptions) at .\client.jl:266
+ [10] _start() at .\client.jl:425
+in expression starting at C:\temp\a\SomePackage\src\mwe_include_error.jl:10
+PS C:\temp\a\SomePackage\src>                                                                                                                                    

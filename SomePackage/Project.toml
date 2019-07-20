@@ -1,0 +1,6 @@
+authors = ["bernhard <5026865+kafisatz@users.noreply.github.com>"]
+name = "SomePackage"
+uuid = "1862b250-aad8-11e9-1060-bf687f2d6f4e"
+version = "0.1.0"
+
+[deps]
