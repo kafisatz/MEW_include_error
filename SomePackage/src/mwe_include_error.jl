@@ -5,7 +5,14 @@ using Pkg
 Pkg.activate(".")
 @show readdir(fldr)
 fi=joinpath("src","file.jl")
-@assert isfile(fi)
-@show isfile(fi)
-include(fi)
+
+absfi=abspath(fi)
+@show isfile(absfi)
+include(absfi) #works
+
+@assert isfile(fi) #passes
+@show pwd()
+@show isfile(fi) #true
+@show fi
+include(fi) #fails
 using SomePackage
